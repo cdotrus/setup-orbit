@@ -1,5 +1,10 @@
 # Changelog
 
+## v0.1.2
+
+### Changes
+- Updates documentation
+
 ## v0.1.1
 
 ### Changes

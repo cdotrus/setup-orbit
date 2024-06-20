@@ -10,7 +10,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     steps:
         - name: Setup orbit
-          uses: cdotrus/setup-orbit@v0.1.0
+          uses: cdotrus/setup-orbit@v0
 
         - name: Check orbit version
           run: orbit --version
@@ -22,7 +22,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     steps:
       - name: Setup orbit
-        uses: cdotrus/setup-orbit@v0.1.0
+        uses: cdotrus/setup-orbit@v0
         with:
             orbit-version: 0.12.0
 

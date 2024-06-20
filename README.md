@@ -11,14 +11,14 @@ This GitHub Action will install a release of the orbit package manager for you.
 In most cases all you will need is the following in your workflow.
 
 ```yaml
-- uses: cdotrus/setup-orbit@v0.1.0
+- uses: cdotrus/setup-orbit@v0
 ```
 
 If you want a specific version of `orbit` you can specify this by passing the
 `orbit-version` input.
 
 ```yaml
-- uses: cdotrus/setup-orbit@v0.1.0
+- uses: cdotrus/setup-orbit@v0
   with:
     orbit-version: '0.12.0'
 ```
