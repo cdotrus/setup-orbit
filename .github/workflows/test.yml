@@ -24,7 +24,7 @@ jobs:
       - name: Setup orbit
         uses: cdotrus/setup-orbit@v0.1.0
         with:
-            orbit-version: 0.10.0
+            orbit-version: 0.12.0
 
       - name: Check orbit version
         run: orbit --version
