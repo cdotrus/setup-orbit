@@ -1,4 +1,4 @@
-name: "setup-orbit"
+name: "Setup orbit"
 author: "Chase Ruskin"
 description: Install the orbit HDL package manager
 inputs:
