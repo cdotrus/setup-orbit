@@ -1,5 +1,8 @@
 name: "Setup orbit"
 author: "Chase Ruskin"
+branding:
+  icon: 'play'
+  color: 'blue'
 description: Install the orbit HDL package manager
 inputs:
   orbit-version:
