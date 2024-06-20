@@ -3,7 +3,11 @@ on:
   workflow_dispatch:
     inputs:
       version:
-        description: 'Version to release'
+        description: 'Version tag for release'
+        required: true
+        type: string
+      major:
+        description: 'Major version tag'
         required: true
         type: string
 
@@ -26,8 +30,16 @@ jobs:
     - name: Tag commit as version
       run: git tag ${{ inputs.version }}
 
-    - name: Push tag
+    - name: Push specific version tag
       run: git push --tags
+
+    - name: Move major version tag
+      shell: bash {0}
+      run: |
+        git tag -d ${{ inputs.major }}
+        git push origin :refs/tags/${{ inputs.major }}
+        git tag ${{ inputs.major }}
+        git push --tags
       
     - name: Upload releases
       uses: ncipollo/release-action@v1
