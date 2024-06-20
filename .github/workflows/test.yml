@@ -1,0 +1,30 @@
+name: build
+on:
+  workflow_call:
+
+jobs:
+  test-latest:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-13, macos-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+        - name: Setup orbit
+          uses: cdotrus/setup-orbit@v0.1.0
+
+        - name: Check orbit version
+          run: orbit --version
+
+  test-version:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-13, macos-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - name: Setup orbit
+        uses: cdotrus/setup-orbit@v0.1.0
+        with:
+            orbit-version: 0.10.0
+
+      - name: Check orbit version
+        run: orbit --version
