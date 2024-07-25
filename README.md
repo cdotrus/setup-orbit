@@ -2,7 +2,7 @@
 
 [![Test](https://github.com/chaseruskin/setup-orbit/actions/workflows/test.yml/badge.svg?branch=trunk)](https://github.com/chaseruskin/setup-orbit/actions/workflows/test.yml)
 
-This GitHub Action will install a release of the orbit package manager for you.
+This GitHub Action will install a release of orbit, an agile package manager and extensible build tool for hardware description languages (HDLs).
 
 ## Usage
 
@@ -14,7 +14,7 @@ In most cases all you will need is the following in your workflow.
 - uses: chaseruskin/setup-orbit@v0
 ```
 
-If you want a specific version of `orbit` you can specify this by passing the
+If you want a specific version of `orbit`, you can specify this by passing the
 `orbit-version` input.
 
 ```yaml
