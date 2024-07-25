@@ -1,4 +1,4 @@
-name: release
+name: Release
 on: 
   workflow_dispatch:
     inputs:
@@ -47,3 +47,23 @@ jobs:
         bodyFile: ./RELEASE_NOTES.md
         token: ${{ secrets.GITHUB_TOKEN }}
         tag: ${{ inputs.version }}
+
+  post-release-latest:
+    needs: [release]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup Orbit
+        uses: chaseruskin/setup-orbit@${{ inputs.major }}
+
+      - name: Test Orbit
+        run: orbit --version
+
+  post-release-specific:
+    needs: [release]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup Orbit
+        uses: chaseruskin/setup-orbit@${{ inputs.version }}
+
+      - name: Test Orbit
+        run: orbit --version

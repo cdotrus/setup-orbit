@@ -18,12 +18,12 @@ runs:
       uses: baptiste0928/cargo-install@v3
       with:
         crate: orbit
-        git: https://github.com/cdotrus/orbit
+        git: https://github.com/chaseruskin/orbit
 
     - if: ${{ inputs.orbit-version }} != null
       name: Install orbit from remote repository using particular version
       uses: baptiste0928/cargo-install@v3
       with:
         crate: orbit
-        git: https://github.com/cdotrus/orbit
+        git: https://github.com/chaseruskin/orbit
         tag: ${{ inputs.orbit-version }}
