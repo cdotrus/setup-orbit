@@ -3,6 +3,20 @@ on:
   push:
 
 jobs:
+  update-dev-tag:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Fetch Repository
+      uses: actions/checkout@v4
+
+    - name: Move dev version tag
+      shell: bash {0}
+      run: |
+        git tag -d dev
+        git push origin :refs/tags/dev
+        git tag dev
+        git push --tags
+
   test-latest:
     strategy:
       matrix:
@@ -10,7 +24,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     steps:
       - name: Setup orbit
-        uses: chaseruskin/setup-orbit
+        uses: chaseruskin/setup-orbit@dev
 
       - name: Check orbit version
         run: orbit --version
@@ -22,7 +36,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     steps:
       - name: Setup orbit
-        uses: chaseruskin/setup-orbit
+        uses: chaseruskin/setup-orbit@dev
         with:
           orbit-version: 0.12.0
 
