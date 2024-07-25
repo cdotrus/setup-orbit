@@ -3,7 +3,7 @@ author: "Chase Ruskin"
 branding:
   icon: 'play'
   color: 'blue'
-description: Install the orbit HDL package manager
+description: Install orbit, an agile package manager and extensible build tool for hdls
 inputs:
   orbit-version:
     description: 'A valid semver specifier of the orbit version to install'
