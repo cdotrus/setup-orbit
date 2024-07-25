@@ -7,11 +7,10 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest, windows-latest, macos-13, macos-latest]
-        ver: ['v0']
     runs-on: ${{ matrix.os }}
     steps:
       - name: Setup orbit
-        uses: chaseruskin/setup-orbit@${{ matrix.ver }}
+        uses: chaseruskin/setup-orbit
 
       - name: Check orbit version
         run: orbit --version
@@ -20,11 +19,10 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest, windows-latest, macos-13, macos-latest]
-        ver: ['v0']
     runs-on: ${{ matrix.os }}
     steps:
       - name: Setup orbit
-        uses: chaseruskin/setup-orbit@${{ matrix.ver }}
+        uses: chaseruskin/setup-orbit
         with:
           orbit-version: 0.12.0
 

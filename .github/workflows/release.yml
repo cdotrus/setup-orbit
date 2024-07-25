@@ -53,7 +53,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Setup Orbit
-        uses: chaseruskin/setup-orbit@${{ inputs.major }}
+        uses: chaseruskin/setup-orbit
 
       - name: Test Orbit
         run: orbit --version
@@ -63,7 +63,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Setup Orbit
-        uses: chaseruskin/setup-orbit@${{ inputs.version }}
+        uses: chaseruskin/setup-orbit
 
       - name: Test Orbit
         run: orbit --version
