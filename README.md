@@ -2,7 +2,7 @@
 
 [![Test](https://github.com/chaseruskin/setup-orbit/actions/workflows/test.yml/badge.svg?branch=trunk)](https://github.com/chaseruskin/setup-orbit/actions/workflows/test.yml)
 
-This GitHub Action will install a release of orbit, an agile package manager and extensible build tool for hardware description languages (HDLs).
+This GitHub Action will install a release of [Orbit](https://github.com/chaseruskin/orbit), an agile package manager and extensible build tool for hardware description languages (HDLs).
 
 ## Usage
 
